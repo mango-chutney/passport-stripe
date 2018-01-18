@@ -32,13 +32,26 @@
     "util": ""
   },
   "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-mango": "^1.0.2",
+    "flow-bin": "^0.63.1",
+    "flow-typed": "^2.2.3",
+    "prettier": "^1.10.2",
     "vows": "0.6.x"
   },
   "engines": {
     "node": ">= 0.4.0"
   },
   "scripts": {
+    "eslint": "eslint --config ./.eslintrc.json ./lib",
+    "eslint-fix": "yarn run eslint --fix",
+    "lint": "yarn run prettier && yarn run eslint && flow check",
+    "prettier": "prettier --write ./lib/**/*.js ./package.json ./README.md",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
   },
   "license": "MIT"
 }
