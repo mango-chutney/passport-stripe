@@ -24,7 +24,7 @@
       "url": "http://www.opensource.org/licenses/MIT"
     }
   ],
-  "main": "./lib/passport-stripe",
+  "main": "./lib",
   "dependencies": {
     "passport-oauth": "^1.0.0"
   },
